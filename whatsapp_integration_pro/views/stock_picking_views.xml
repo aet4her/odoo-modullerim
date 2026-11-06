@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_picking_form_inherit_whatsapp_integration_pro" model="ir.ui.view">
+        <field name="name">stock.picking.form.inherit.whatsapp.integration.pro</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_send_whatsapp_tracking"
+                        type="object"
+                        string="WhatsApp Tracking"
+                        class="btn-success"
+                        icon="fa-whatsapp"
+                        invisible="state == 'cancel'"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
